@@ -1,0 +1,27 @@
+/* Class Selector */
+.box1{
+    background-color: rgb(218, 100, 100);
+}
+.box2{
+    background-color: pink;
+}
+.box3{
+    background-color: rgb(80, 80, 203);
+}
+
+/* Id selector */
+#box{
+    width: 100px;
+}
+
+#box1{
+    width: 85px;
+}
+
+#box2{
+    width: 70px;
+}
+
+#box3{
+    width: 50px;
+}

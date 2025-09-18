@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wdth,wght@75,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>UrbanWear</title>
+    <style>
+      :root {
+        --primary: #4d2308;
+        --secondary: #e5ded1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+      }
+
+      body {
+        background-color: #e5ded1;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--primary);
+        color: white;
+        height: auto;
+        align-items: center;
+      }
+
+      #logo {
+        margin-left: 50px;
+        margin-right: 550px;
+        font-size: 160%;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        color: white;
+        text-decoration: none;
+        margin: 20px;
+        font-size: 105%;
+      }
+
+      .nav-login-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 10px;
+        padding: 7px;
+        /* width: 80px; */
+        border-radius: 7px;
+        border: 0.5px solid var(--primary);
+        background-color: var(--secondary);
+        color: var(--primary);
+      }
+
+      /* .nav-reg-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 10px;
+        padding: 7px;
+        width: 80px;
+        border-radius: 7px;
+        border: 1px solid var(--secondary);
+        background-color: var(--primary);
+        color: var(--secondary);
+        margin-right: 50px;
+      } */
+
+      /*nav button hover styles */
+      .nav-login-btn:hover {
+        border: 0.5px solid var(--secondary);
+        background-color: var(--primary);
+        color: var(--secondary);
+      }
+
+      /* .nav-reg-btn:hover {
+        border: 1px solid var(--primary);
+        background-color: var(--secondary);
+        color: var(--primary);
+      } */
+
+      /* content styles */
+      .container {
+        background-color: #e5ded1;
+        height: auto;
+        width: 100%;
+      }
+
+      .details {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        height: 50px;
+      }
+
+      #products {
+        font-size: 120%;
+        padding: 10px;
+        color: var(--primary);
+        margin-left: 35px;
+      }
+
+      .search-input {
+        height: 30px;
+        border-radius: 7px;
+        margin-right: 7px;
+        border-color: #4d2308;
+      }
+
+      input[type="text"] {
+        padding-left: 7px;
+        font-size: 105%;
+      }
+
+      input::placeholder {
+        color: var(--secondary);
+      }
+
+      i {
+        color: #4d2308;
+        font-size: 120%;
+      }
+
+      /* card styles */
+
+      .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .card {
+        border: 0.5px solid var(--primary);
+        border-radius: 7px;
+        width: 250px;
+        height: auto;
+        background-color: white;
+        margin: 20px;
+        margin-bottom: 30px;
+      }
+
+      .p {
+        color: var(--primary);
+        margin-left: 22px;
+        margin-top: 5px;
+        margin-bottom: 4px;
+      }
+
+      .buy-btn {
+        margin-left: 20px;
+        width: 107px;
+        padding: 7px;
+        color: var(--primary);
+        background-color: var(--secondary);
+        border: 1px solid var(--primary);
+        border-radius: 7px;
+        margin-bottom: 10px;
+      }
+      .addtocart-btn {
+        width: 100px;
+        padding: 7px;
+        color: var(--primary);
+        background-color: var(--secondary);
+        border: 1px solid var(--primary);
+        border-radius: 7px;
+        margin-bottom: 10px;
+      }
+
+      .addtocart-btn:hover {
+        background-color: white; /*var(--secondary); */
+      }
+
+      .buy-btn:hover {
+        background-color: white; /*var(--secondary); */
+      }
+
+      /* footer css */
+      .foot {
+        background: rgb(38, 38, 38);
+        color: white;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #footer-logo {
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 450px;
+      }
+
+      .link {
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin-right: 170px;
+      }
+
+      .link:hover {
+        color: var(--secondary);
+      }
+
+      .linkc {
+        margin: 5px;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+
+      .linkc:hover {
+        color: var(--secondary);
+      }
+
+      .fa-brands {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        color: white;
+        font-size: 105%;
+        margin-right: 3px;
+      }
+
+      /* span tag of footer-icons */
+
+      .span-icons {
+        padding-left: 5px;
+      }
+      .copyright {
+        border-top: 0.1px solid white;
+        color: white;
+        background-color: rgb(38, 38, 38);
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Responsive styles for mobile */
+      @media screen and (max-width: 768px) {
+        /* nav changes */
+        nav {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #logo {
+          margin: 10px 0;
+          text-align: center;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        .nav-links,
+        .nav-login-btn {
+          margin: 10px 0;
+        }
+
+        /* cards - 2 per row */
+        .cards {
+          justify-content: center;
+        }
+
+        .card {
+          width: 45%;
+          margin: 10px;
+        }
+
+        /* footer */
+        .foot {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        #footer-logo {
+          margin: 20px 0;
+        }
+
+        .footer-links {
+          margin: 10px 0;
+        }
+
+        .link {
+          margin-right: 0;
+        }
+
+        /* cards button */
+
+        .buy-btn {
+          width: 40%;
+          font-size: 73%;
+        }
+        .addtocart-btn {
+          width: 40%;
+          font-size: 73%;
+        }
+
+        /* product and search  content */
+        #products {
+          margin-left: 5px;
+        font-size: 100%;
+        }
+
+         .search-input {
+          width: 150px;
+         }
+
+         input[type="text"] {
+          font-size: 100%;
+         }
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav header -->
+    <header>
+      <nav>
+        <span id="logo">UrbanWear</span>
+        <a class="nav-links" href="">Home</a>
+        <a class="nav-links" href="">Products</a>
+        <a class="nav-links" href="">About Us</a>
+        <a class="nav-links" href="">Contact Us</a>
+        <a class="nav-login-btn" href="">Add to Cart</a>
+        <!-- <a class="nav-reg-btn" href="">Register</a> -->
+      </nav>
+    </header>
+
+    <!-- body content -->
+    <!-- hero image -->
+    <img src="./assests/heroimg.png" alt="" style="width: 100%; height: 300px; ">
+
+    <!-- products -->
+    <div class="container">
+      <div class="details">
+        <span id="products">All Products</span>
+        <!-- search input -->
+        <input type="text" class="search-input" placeholder="Search" />
+        <!-- search icon -->
+        <a class="icons" href=""
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+        <!-- filter icon -->
+        <a class="icons" href=""><i class="fa-solid fa-filter"></i></a>
+      </div>
+
+      <!-- cards -->
+      <div class="cards">
+        <div class="card">
+          <img
+            src="./assests/assesories/armcuff.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Armcuff</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/neklace.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Necklace</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/waistchain.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Waist Chain</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/pendent.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Pendent</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/earring.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Earrings</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/ring.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Rings</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/bracelet.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Bracelet</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="./assests/assesories/watch.png"
+            alt=""
+            width="100%"
+            height="230px"
+            style="padding: 20px; padding-bottom: 0"
+          />
+          <h4 class="p">Watch</h4>
+          <p class="p">RS. 190</p>
+          <button class="buy-btn">Buy</button>
+          <button class="addtocart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot">
+        <div id="footer-logo">
+          <h1>UrbanWear</h1>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a class="link" href="">Home</a>
+          <a class="link" href="">Products</a>
+          <a class="link" href="">About Us</a>
+          <a class="link" href="">Contact Us</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Contact Us</h3>
+          <a class="linkc" href=""
+            ><i class="fa-brands fa-facebook"></i>
+            <span class="span-icons">Facebook</span>
+          </a>
+          <a class="linkc" href=""
+            ><i class="fa-brands fa-instagram"></i
+            ><span class="span-icons">Instagram</span></a
+          >
+          <a class="linkc" href=""
+            ><i class="fa-brands fa-google"></i
+            ><span class="span-icons">Google</span></a
+          >
+          <a class="linkc" href=""
+            ><i class="fa-brands fa-linkedin"></i
+            ><span class="span-icons">Linkedin</span></a
+          >
+        </div>
+      </div>
+
+      <div class="copyright">Copyright 2025.</div>
+    </footer>
+  </body>
+</html>
