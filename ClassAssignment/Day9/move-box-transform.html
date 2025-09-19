@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move-box{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            transition:transform 0.1s;
+        }
+
+        .move-box:hover{
+             transform: translateX(150px); /*Moves box 50px to right */
+        }
+    </style>
+</head>
+<body>
+    <h3>hover to move</h3>
+    <div class="move-box"></div>
+</body>
+</html>

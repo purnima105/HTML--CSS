@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background: teal;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      transition: transform 0.5s;
+    }
+
+    /* Move */
+    .translate:hover {
+      transform: translate(50px, 30px); /* Move right 50px, down 30px */
+    }
+
+    /* Scale */
+    .scale:hover {
+      transform: scale(1.5); /* Enlarge 1.5 times */
+    }
+
+    /* Rotate */
+    .rotate:hover {
+      transform: rotate(45deg); /* Rotate 45 degrees */
+    }
+
+    /* Skew */
+    .skew:hover {
+      transform: skew(90deg, 10deg); /* Skew X and Y */
+    }
+  </style>
+</head>
+<body>
+
+<h2>CSS Transform Examples</h2>
+<div class="box translate">Translate</div>
+<div class="box scale">Scale</div>
+<div class="box rotate">Rotate</div>
+<div class="box skew">Skew</div>
+
+</body>
+</html>
